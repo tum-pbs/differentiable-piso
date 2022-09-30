@@ -1,7 +1,10 @@
 # Code repository for "Learned Turbulence Modelling with Differentiable Fluid Solvers"
 
 This repository contains the source code for 
-["Learned Turbulence Modelling with Differentiable Fluid Solvers"](http://arxiv.org/abs/2202.06988) by Bjoern List, Liwei Chen, and Nils Thuerey.
+**Learned Turbulence Modelling with Differentiable Fluid Solvers: Physics-based Loss Functions and Optimisation Horizons** 
+by [Bjoern List](https://ge.in.tum.de/about/bjorn-list/), [Liwei Chen](https://ge.in.tum.de/about/dr-liwei-chen/), and [Nils Thuerey](https://ge.in.tum.de/about/n-thuerey/). 
+
+The article is published (OA) in the [Journal of Fluid Mechanics (JFM)](https://doi.org/10.1017/jfm.2022.738), pre-prints are available on [arXiv](http://arxiv.org/abs/2202.06988).
 
 ![Teaser-image](resources/learned-piso1-teaser.jpeg)
 
@@ -44,7 +47,7 @@ This requires installations of CUDA's ```nvcc``` compiler and ```gcc4.8```. For 
 
 The solver supports two-dimensional flow simulations on staggered, uniform cartesian grids. As in the PISO method, a simulation step is split into a prediction step solving the implicit advection-diffusion system, followed by two pressure correction steps.
 
-It is recommended to follow this documentation along with one the code-verification file `lidDrivenCavity_2D.py`.
+It is recommended to follow this documentation along with one the code-validation file `lid_driven_cavity_2D.py`.
 
 Include all python function by importing
 ```
@@ -145,4 +148,9 @@ The dataset consists of spatially and temporally coarsened DNS snapshots. In lin
 
 Our data contains 2 simulations of the isotropic decaying turbulence case, 3 setups of temporally developing mixing layers and 6 simulations of spatially developing mixing layers. 
 
-The training script is setup to directly process coarsened data, and one simulation in the dataset is always left as an extrapolative test case.
+The training script is designed to directly process coarsened data and one simulation in the dataset is always left as an extrapolative test case.
+
+## Funding
+
+Our work is supported by European Research Council (ERC) Consolidator Grant
+CoG-2019-863850 (SpaTe).
